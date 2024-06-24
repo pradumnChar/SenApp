@@ -1,4 +1,4 @@
-import User from "../models/user.model.js";
+import User from "../models/user.js";
 import bcrypt from "bcryptjs"
 
 import { generateTokenAndSetCookie } from "../lib/utils/generateToken.js";
@@ -12,12 +12,12 @@ export const signup = async (req, res, next) => {
       const userName = await User.findOne({username});
       if(userName)
          {
-            return res.status(400).json({error: "userName already exists"});
+            return res.status(400).json({error: "Username already exists"});
          }
          const userEmail = await User.findOne({email});
          if(userEmail)
             {
-               return res.status(400).json({error: "UserEmail already exists"});
+               return res.status(400).json({error: "Email already exists"});
             }
             if(password.length < 5)
                {
