@@ -16,6 +16,7 @@ cloudinary.config({
 });
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 const __dirname= path.resolve()
 
 //to parse foreing data below to used
@@ -27,7 +28,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/notifications", notificationRoutes);
-if(process.env.NODE_ENV !== 'production')
+if(process.env.NODE_ENV === 'production')
 	{
 		app.use(express.static(path.join(__dirname,"/frontend/dist")));
 		app.get("*", (req, res) =>{
@@ -35,7 +36,7 @@ if(process.env.NODE_ENV !== 'production')
 		})
 	}
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
   console.log("listening ");
   connectMongoDB();
 });
