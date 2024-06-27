@@ -1,5 +1,9 @@
 # SocialApp-SenApp
-LIVE LINK::::::::  https://senapp.onrender.com/
+LIVE LINK::::::::  
+
+https://senapp.onrender.com
+
+
 Welcome to SocialApp, a modern and intuitive social media application designed to connect people from all around the world. Share your thoughts, follow friends, and stay updated with the latest trends.
 ##Technolgy used: ReactJS , NodeJs , Express ,MongoDB
 Note: TanStack (react-query) for state Management + cache management
