@@ -2,7 +2,7 @@
 LIVE LINK::::::::  
 
 https://senapp.onrender.com
-
+NOTE:Render deploy service can delay requests by 30 seconds or more in cases so please wait for complete load.
 
 Welcome to SocialApp, a modern and intuitive social media application designed to connect people from all around the world. Share your thoughts, follow friends, and stay updated with the latest trends.
 ##Technolgy used: ReactJS , NodeJs , Express ,MongoDB
